@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+
+body {
+    background-color: #140B0E;
+    color: #fff;
+}
+
+.banner {
+    font-family: 'Black Han Sans', sans-serif;
+    background-color: #CA6546;
+    color: #000;
+    font-size: 4em;
+    padding: 20px;
+}
+
