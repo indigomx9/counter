@@ -1,10 +1,10 @@
 import React from 'react';
-import './COutput.css';
+import classes from './COutput.css';
 
 let COutput = (props) => {
     return (
-        <div className="COutput">
-            Current Counter: {props.value}
+        <div className={classes.COutput}>
+            Counter: {props.value}
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import './CControl.css';
+import classes from './CControl.css';
 
 let CControl = (props) => {
     return (
-        <div className="CControl" onClick={props.clicked}>
+        <div className={classes.CControl} onClick={props.clicked}>
             {props.label}
         </div>
     );
