@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, ADD, SUBTRACT } from '../actions/actions';
+import { INCREMENT, DECREMENT, ADD, SUBTRACT } from '../actions/actionTypes';
 
 let initialState = {
     counter: 0

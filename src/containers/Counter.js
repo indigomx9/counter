@@ -5,7 +5,7 @@ import COutput from '../components/COutput/COutput';
 import { 
     INCREMENT, DECREMENT, ADD, SUBTRACT, 
     STORE_RESULT, DELETE_RESULT
- } from '../actions/actions';
+ } from '../actions/actionTypes';
 
 
 class Counter extends React.Component {
