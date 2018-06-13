@@ -18,7 +18,7 @@ class Counter extends React.Component {
                 <CControl label="Add 10" clicked={this.props.onAddCounter} />
                 <CControl label="Subtract 15" clicked={this.props.onSubtractCounter} />
                 <hr/>
-                <button onClick={this.props.onStoreResult}>Store Result</button>
+                <button onClick={() => this.props.onStoreResult(this.props.ctr)}>Store Result</button>
                 <ul>
                     {this.props.storedResults.map(strResult => (
                         <li 
@@ -34,8 +34,8 @@ class Counter extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        ctr: state.counter,
-        storedResults: state.results
+        ctr: state.ctr.counter,
+        storedResults: state.res.results
     };
 };
 
@@ -45,8 +45,8 @@ let mapDispatchToProps = (dispatch) => {
         onDecrementCounter: () => dispatch({ type: DECREMENT }),
         onAddCounter: () => dispatch({ type: ADD, payload: 10 }),
         onSubtractCounter: () => dispatch({ type: SUBTRACT, payload: 15 }),        
-        onStoreResult: () => dispatch({ type: STORE_RESULT}),
-        onDeleteResult: (id) => dispatch({ type: DELETE_RESULT, resultElId: id })
+        onStoreResult: (result) => dispatch({ type: STORE_RESULT, payload: result}),
+        onDeleteResult: (id) => dispatch({ type: DELETE_RESULT, payload: id })
     };
 };
 
